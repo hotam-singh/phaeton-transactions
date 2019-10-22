@@ -1,5 +1,5 @@
 {
-	"name": "@phaetonhq/phaeton-transactions",
+	"name": "phaeton-transactions",
 	"version": "2.3.1",
 	"description": "Everything related to transactions according to the Phaeton protocol",
 	"author": "Phaeton Foundation <admin@phaeton.io>, lightcurve GmbH <admin@lightcurve.io>",
@@ -89,7 +89,5 @@
 		"wait-on": "3.2.0"
 	}
 
-,"_resolved": "https://registry.npmjs.org/@phaetonhq/phaeton-transactions/-/phaeton-transactions-2.3.1.tgz"
-,"_integrity": "sha512-RnB/FMgPOOl/C1QJ7ii71JpmRFTMD2hoWKQfwU5wYBjnXIiwgU6YvjXDIjoh+OfNYwv8frGlI5nq6qmPb0FhUQ=="
-,"_from": "@phaetonhq/phaeton-transactions@2.3.1"
+,"_from": "phaeton-transactions@2.3.1"
 }
