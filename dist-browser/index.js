@@ -2,7 +2,7 @@
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 exports.BIG_ENDIAN = 'big';
 exports.LITTLE_ENDIAN = 'little';
 exports.intToBuffer = (value, byteLength, endianness = exports.BIG_ENDIAN) => new BigNum(value).toBuffer({ size: byteLength, endian: endianness });
@@ -26,7 +26,7 @@ exports.hexToBuffer = (hex, argumentName = 'Argument') => {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"@phaetonhq/bignum":92,"buffer":146}],2:[function(require,module,exports){
+},{"bignum":92,"buffer":146}],2:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SIGNED_MESSAGE_PREFIX = 'Phaeton Signed Message:\n';
@@ -513,7 +513,7 @@ exports.verifyData = (data, signature, publicKey) => nacl_1.verifyDetached(data,
 },{"./buffer":1,"./constants":2,"./hash":5,"./keys":7,"./nacl":9,"buffer":146,"varuint-bitcoin":275}],12:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const _0_transfer_transaction_1 = require("./0_transfer_transaction");
 const constants_1 = require("./constants");
 const utils_1 = require("./utils");
@@ -563,12 +563,12 @@ exports.transfer = (inputs) => {
     return transferTransaction.toJSON();
 };
 
-},{"./0_transfer_transaction":13,"./constants":25,"./utils":35,"@phaetonhq/phaeton-cryptography":6}],13:[function(require,module,exports){
+},{"./0_transfer_transaction":13,"./constants":25,"./utils":35,"phaeton-cryptography":6}],13:[function(require,module,exports){
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const base_transaction_1 = require("./base_transaction");
 const constants_1 = require("./constants");
 const errors_1 = require("./errors");
@@ -682,10 +682,10 @@ TransferTransaction.FEE = constants_1.TRANSFER_FEE.toString();
 exports.TransferTransaction = TransferTransaction;
 
 }).call(this,require("buffer").Buffer)
-},{"./base_transaction":24,"./constants":25,"./errors":27,"./utils":35,"@phaetonhq/bignum":92,"@phaetonhq/phaeton-cryptography":6,"buffer":146}],14:[function(require,module,exports){
+},{"./base_transaction":24,"./constants":25,"./errors":27,"./utils":35,"bignum":92,"phaeton-cryptography":6,"buffer":146}],14:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const _1_second_signature_transaction_1 = require("./1_second_signature_transaction");
 const constants_1 = require("./constants");
 const utils_1 = require("./utils");
@@ -707,10 +707,10 @@ exports.registerSecondPassphrase = (inputs) => {
     return secondSignatureTransaction.toJSON();
 };
 
-},{"./1_second_signature_transaction":15,"./constants":25,"./utils":35,"@phaetonhq/phaeton-cryptography":6}],15:[function(require,module,exports){
+},{"./1_second_signature_transaction":15,"./constants":25,"./utils":35,"phaeton-cryptography":6}],15:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const base_transaction_1 = require("./base_transaction");
 const constants_1 = require("./constants");
 const errors_1 = require("./errors");
@@ -806,7 +806,7 @@ SecondSignatureTransaction.TYPE = 1;
 SecondSignatureTransaction.FEE = constants_1.SIGNATURE_FEE.toString();
 exports.SecondSignatureTransaction = SecondSignatureTransaction;
 
-},{"./base_transaction":24,"./constants":25,"./errors":27,"./utils":35,"@phaetonhq/phaeton-cryptography":6}],16:[function(require,module,exports){
+},{"./base_transaction":24,"./constants":25,"./errors":27,"./utils":35,"phaeton-cryptography":6}],16:[function(require,module,exports){
 (function (Buffer){
 "use strict";
 var __rest = (this && this.__rest) || function (s, e) {
@@ -993,8 +993,8 @@ exports.castVotes = (inputs) => {
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const base_transaction_1 = require("./base_transaction");
 const constants_1 = require("./constants");
 const errors_1 = require("./errors");
@@ -1170,12 +1170,12 @@ VoteTransaction.FEE = constants_1.VOTE_FEE.toString();
 exports.VoteTransaction = VoteTransaction;
 
 }).call(this,require("buffer").Buffer)
-},{"./base_transaction":24,"./constants":25,"./errors":27,"./utils":35,"./utils/validation":41,"@phaetonhq/bignum":92,"@phaetonhq/phaeton-cryptography":6,"buffer":146}],20:[function(require,module,exports){
+},{"./base_transaction":24,"./constants":25,"./errors":27,"./utils":35,"./utils/validation":41,"bignum":92,"phaeton-cryptography":6,"buffer":146}],20:[function(require,module,exports){
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const base_transaction_1 = require("./base_transaction");
 const constants_1 = require("./constants");
 const errors_1 = require("./errors");
@@ -1362,7 +1362,7 @@ MultisignatureTransaction.FEE = constants_1.MULTISIGNATURE_FEE.toString();
 exports.MultisignatureTransaction = MultisignatureTransaction;
 
 }).call(this,require("buffer").Buffer)
-},{"./base_transaction":24,"./constants":25,"./errors":27,"./response":29,"./utils":35,"@phaetonhq/bignum":92,"@phaetonhq/phaeton-cryptography":6,"buffer":146}],21:[function(require,module,exports){
+},{"./base_transaction":24,"./constants":25,"./errors":27,"./response":29,"./utils":35,"bignum":92,"phaeton-cryptography":6,"buffer":146}],21:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const _4_multisignature_transaction_1 = require("./4_multisignature_transaction");
@@ -1655,8 +1655,8 @@ exports.DappTransaction = DappTransaction;
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const constants_1 = require("./constants");
 const errors_1 = require("./errors");
 const response_1 = require("./response");
@@ -2007,7 +2007,7 @@ BaseTransaction.FEE = '0';
 exports.BaseTransaction = BaseTransaction;
 
 }).call(this,require("buffer").Buffer)
-},{"./constants":25,"./errors":27,"./response":29,"./utils":35,"./utils/validation/schema":42,"@phaetonhq/bignum":92,"@phaetonhq/phaeton-cryptography":6,"buffer":146}],25:[function(require,module,exports){
+},{"./constants":25,"./errors":27,"./response":29,"./utils":35,"./utils/validation/schema":42,"bignum":92,"phaeton-cryptography":6,"buffer":146}],25:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FIXED_POINT = 10 ** 8;
@@ -2051,7 +2051,7 @@ exports.MAX_TRANSFER_ASSET_DATA_LENGTH = 64;
 },{}],26:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const utils_1 = require("./utils");
 exports.createSignatureObject = (transaction, passphrase) => {
     if (!utils_1.verifyTransaction(transaction)) {
@@ -2068,7 +2068,7 @@ exports.createSignatureObject = (transaction, passphrase) => {
     };
 };
 
-},{"./utils":35,"@phaetonhq/phaeton-cryptography":6}],27:[function(require,module,exports){
+},{"./utils":35,"phaeton-cryptography":6}],27:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class TransactionError extends Error {
@@ -2121,7 +2121,7 @@ exports.convertToAssetError = (id, errors) => {
 },{}],28:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 const _0_transfer_1 = require("./0_transfer");
 exports.transfer = _0_transfer_1.transfer;
 const _0_transfer_transaction_1 = require("./0_transfer_transaction");
@@ -2189,7 +2189,7 @@ const exposedUtils = {
 };
 exports.utils = exposedUtils;
 
-},{"./0_transfer":12,"./0_transfer_transaction":13,"./1_register_second_passphrase":14,"./1_second_signature_transaction":15,"./2_delegate_transaction":16,"./2_register_delegate":17,"./3_cast_votes":18,"./3_vote_transaction":19,"./4_multisignature_transaction":20,"./4_register_multisignature_account":21,"./5_create_dapp":22,"./5_dapp_transaction":23,"./base_transaction":24,"./constants":25,"./create_signature_object":26,"./errors":27,"./response":29,"./utils":35,"@phaetonhq/bignum":92}],29:[function(require,module,exports){
+},{"./0_transfer":12,"./0_transfer_transaction":13,"./1_register_second_passphrase":14,"./1_second_signature_transaction":15,"./2_delegate_transaction":16,"./2_register_delegate":17,"./3_cast_votes":18,"./3_vote_transaction":19,"./4_multisignature_transaction":20,"./4_register_multisignature_account":21,"./5_create_dapp":22,"./5_dapp_transaction":23,"./base_transaction":24,"./constants":25,"./create_signature_object":26,"./errors":27,"./response":29,"./utils":35,"bignum":92}],29:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Status;
@@ -2207,7 +2207,7 @@ exports.createResponse = (id, errors) => ({
 },{}],30:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const errors_1 = require("../errors");
 exports.validateSenderIdAndPublicKey = (id, senderId, senderPublicKey) => {
     const actualAddress = phaeton_cryptography_1.getAddressFromPublicKey(senderPublicKey);
@@ -2216,10 +2216,10 @@ exports.validateSenderIdAndPublicKey = (id, senderId, senderPublicKey) => {
         : undefined;
 };
 
-},{"../errors":27,"@phaetonhq/phaeton-cryptography":6}],31:[function(require,module,exports){
+},{"../errors":27,"phaeton-cryptography":6}],31:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const time_1 = require("./time");
 exports.createBaseTransaction = ({ passphrase, timeOffset, }) => {
     const { address: senderId, publicKey: senderPublicKey } = passphrase
@@ -2235,10 +2235,10 @@ exports.createBaseTransaction = ({ passphrase, timeOffset, }) => {
     };
 };
 
-},{"./time":39,"@phaetonhq/phaeton-cryptography":6}],32:[function(require,module,exports){
+},{"./time":39,"phaeton-cryptography":6}],32:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 const constants_1 = require("../constants");
 const validation_1 = require("./validation");
 const BASE_10 = 10;
@@ -2275,12 +2275,12 @@ exports.convertPHAToBeddows = (lskAmount) => {
 exports.prependPlusToPublicKeys = (publicKeys) => publicKeys.map(publicKey => `+${publicKey}`);
 exports.prependMinusToPublicKeys = (publicKeys) => publicKeys.map(publicKey => `-${publicKey}`);
 
-},{"../constants":25,"./validation":41,"@phaetonhq/bignum":92}],33:[function(require,module,exports){
+},{"../constants":25,"./validation":41,"bignum":92}],33:[function(require,module,exports){
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const cryptography = require("phaeton-cryptography");
 const constants_1 = require("../constants");
 exports.isValidValue = (value) => {
     if (value === undefined) {
@@ -2432,17 +2432,17 @@ exports.getTransactionBytes = (transaction) => {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"../constants":25,"@phaetonhq/bignum":92,"@phaetonhq/phaeton-cryptography":6,"buffer":146}],34:[function(require,module,exports){
+},{"../constants":25,"bignum":92,"phaeton-cryptography":6,"buffer":146}],34:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const get_transaction_bytes_1 = require("./get_transaction_bytes");
 exports.getTransactionHash = (transaction) => {
     const bytes = get_transaction_bytes_1.getTransactionBytes(transaction);
     return cryptography.hash(bytes);
 };
 
-},{"./get_transaction_bytes":33,"@phaetonhq/phaeton-cryptography":6}],35:[function(require,module,exports){
+},{"./get_transaction_bytes":33,"phaeton-cryptography":6}],35:[function(require,module,exports){
 "use strict";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
@@ -2464,7 +2464,7 @@ __export(require("./sign_raw_transaction"));
 },{"./address":30,"./create_base_transaction":31,"./format":32,"./get_transaction_bytes":33,"./get_transaction_hash":34,"./prepare_transaction":36,"./sign_and_validate":37,"./sign_raw_transaction":38,"./time":39,"./transaction_id":40,"./validation":41,"./verify":46}],36:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const sign_and_validate_1 = require("./sign_and_validate");
 const time_1 = require("./time");
 const transaction_id_1 = require("./transaction_id");
@@ -2490,7 +2490,7 @@ exports.prepareTransaction = (partialTransaction, passphrase, secondPassphrase, 
     return transactionWithId;
 };
 
-},{"./sign_and_validate":37,"./time":39,"./transaction_id":40,"@phaetonhq/phaeton-cryptography":6}],37:[function(require,module,exports){
+},{"./sign_and_validate":37,"./time":39,"./transaction_id":40,"phaeton-cryptography":6}],37:[function(require,module,exports){
 "use strict";
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
@@ -2502,7 +2502,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const errors_1 = require("../errors");
 const get_transaction_hash_1 = require("./get_transaction_hash");
 exports.multiSignTransaction = (transaction, passphrase) => {
@@ -2599,10 +2599,10 @@ exports.verifyTransaction = (transaction, secondPublicKey) => {
         : verified;
 };
 
-},{"../errors":27,"./get_transaction_hash":34,"@phaetonhq/phaeton-cryptography":6}],38:[function(require,module,exports){
+},{"../errors":27,"./get_transaction_hash":34,"phaeton-cryptography":6}],38:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const prepare_transaction_1 = require("./prepare_transaction");
 const time_1 = require("./time");
 exports.signRawTransaction = ({ transaction, passphrase, secondPassphrase, timeOffset, }) => {
@@ -2621,7 +2621,7 @@ exports.signRawTransaction = ({ transaction, passphrase, secondPassphrase, timeO
     return prepare_transaction_1.prepareTransaction(transactionWithProperties, passphrase, secondPassphrase);
 };
 
-},{"./prepare_transaction":36,"./time":39,"@phaetonhq/phaeton-cryptography":6}],39:[function(require,module,exports){
+},{"./prepare_transaction":36,"./time":39,"phaeton-cryptography":6}],39:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const constants_1 = require("../constants");
@@ -2640,7 +2640,7 @@ exports.getTimeWithOffset = (offset) => {
 },{"../constants":25}],40:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const errors_1 = require("../errors");
 const get_transaction_bytes_1 = require("./get_transaction_bytes");
 exports.getId = (transactionBytes) => {
@@ -2663,7 +2663,7 @@ exports.getTransactionId = (transaction) => {
     return firstEntriesToNumber;
 };
 
-},{"../errors":27,"./get_transaction_bytes":33,"@phaetonhq/phaeton-cryptography":6}],41:[function(require,module,exports){
+},{"../errors":27,"./get_transaction_bytes":33,"phaeton-cryptography":6}],41:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var validation_1 = require("./validation");
@@ -3158,8 +3158,8 @@ exports.validateTransaction = (tx) => {
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const cryptography = require("phaeton-cryptography");
 const constants_1 = require("../../constants");
 exports.validatePublicKey = (publicKey) => {
     const publicKeyBuffer = cryptography.hexToBuffer(publicKey);
@@ -3259,10 +3259,10 @@ exports.isValidNumber = (num) => {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"../../constants":25,"@phaetonhq/bignum":92,"@phaetonhq/phaeton-cryptography":6,"buffer":146}],45:[function(require,module,exports){
+},{"../../constants":25,"bignum":92,"phaeton-cryptography":6,"buffer":146}],45:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 const Ajv = require("ajv");
 const addKeywords = require("ajv-merge-patch");
 const schemas = require("./schema");
@@ -3344,10 +3344,10 @@ exports.validator.addKeyword('uniqueSignedPublicKeys', {
 });
 exports.validator.addSchema(schemas.baseTransaction);
 
-},{"./schema":42,"./validation":44,"@phaetonhq/bignum":92,"ajv":47,"ajv-merge-patch":93}],46:[function(require,module,exports){
+},{"./schema":42,"./validation":44,"bignum":92,"ajv":47,"ajv-merge-patch":93}],46:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 const base_transaction_1 = require("../base_transaction");
 const errors_1 = require("../errors");
 const format_1 = require("../utils/format");
@@ -3423,7 +3423,7 @@ exports.verifyMultiSignatures = (id, sender, signatures, transactionBytes) => {
     };
 };
 
-},{"../base_transaction":24,"../errors":27,"../utils/format":32,"./sign_and_validate":37,"@phaetonhq/bignum":92}],47:[function(require,module,exports){
+},{"../base_transaction":24,"../errors":27,"../utils/format":32,"./sign_and_validate":37,"bignum":92}],47:[function(require,module,exports){
 'use strict';
 
 var compileSchema = require('./compile')

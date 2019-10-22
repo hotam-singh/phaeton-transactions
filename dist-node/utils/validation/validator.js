@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 const Ajv = require("ajv");
 const addKeywords = require("ajv-merge-patch");
 const schemas = require("./schema");

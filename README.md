@@ -1,6 +1,6 @@
-# @phaetonhq/phaeton-transactions
+# phaeton-transactions
 
-@phaetonhq/phaeton-transactions is containing everything related to transactions according to the Phaeton protocol
+phaeton-transactions is containing everything related to transactions according to the Phaeton protocol
 
 ## Introduction
 
@@ -94,7 +94,7 @@ on the auto-generated documentation hosted on [phaetonhq.github.io/phaeton-sdk](
 ## Installation
 
 ```sh
-$ npm install --save @phaetonhq/phaeton-transactions
+$ npm install --save phaeton-transactions
 ```
 
 ## License

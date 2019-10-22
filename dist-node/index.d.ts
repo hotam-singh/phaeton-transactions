@@ -1,4 +1,4 @@
-import * as BigNum from '@phaetonhq/bignum';
+import * as BigNum from 'bignum';
 import { transfer } from './0_transfer';
 import { TransferTransaction } from './0_transfer_transaction';
 import { registerSecondPassphrase } from './1_register_second_passphrase';

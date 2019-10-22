@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
+const BigNum = require("bignum");
 const constants_1 = require("../constants");
 const validation_1 = require("./validation");
 const BASE_10 = 10;

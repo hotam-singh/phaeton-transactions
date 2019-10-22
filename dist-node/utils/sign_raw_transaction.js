@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const prepare_transaction_1 = require("./prepare_transaction");
 const time_1 = require("./time");
 exports.signRawTransaction = ({ transaction, passphrase, secondPassphrase, timeOffset, }) => {

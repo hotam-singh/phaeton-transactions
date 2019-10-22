@@ -1,4 +1,4 @@
-import * as BigNum from '@phaetonhq/bignum';
+import * as BigNum from 'bignum';
 import { SignatureObject } from './create_signature_object';
 import { TransactionError } from './errors';
 import { Status } from './response';

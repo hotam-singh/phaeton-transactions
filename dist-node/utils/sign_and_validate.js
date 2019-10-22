@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const cryptography = require("@phaetonhq/phaeton-cryptography");
+const cryptography = require("phaeton-cryptography");
 const errors_1 = require("../errors");
 const get_transaction_hash_1 = require("./get_transaction_hash");
 exports.multiSignTransaction = (transaction, passphrase) => {

@@ -1,4 +1,4 @@
-import * as BigNum from '@phaetonhq/bignum';
+import * as BigNum from 'bignum';
 export declare const validatePublicKey: (publicKey: string) => boolean;
 export declare const isNullByteIncluded: (input: string) => boolean;
 export declare const validateUsername: (username: string) => boolean;

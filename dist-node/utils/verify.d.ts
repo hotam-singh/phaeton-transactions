@@ -1,4 +1,4 @@
-import * as BigNum from '@phaetonhq/bignum';
+import * as BigNum from 'bignum';
 import { MultisignatureStatus } from '../base_transaction';
 import { TransactionError } from '../errors';
 import { Account } from '../transaction_types';

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const BigNum = require("@phaetonhq/bignum");
-const phaeton_cryptography_1 = require("@phaetonhq/phaeton-cryptography");
+const BigNum = require("bignum");
+const phaeton_cryptography_1 = require("phaeton-cryptography");
 const constants_1 = require("./constants");
 const errors_1 = require("./errors");
 const response_1 = require("./response");
